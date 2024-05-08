@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Module",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "image_analyze",
+            "justMyCode": false,
+            "args": [
+                "-p", "prompts/test_analyze.txt",
+                "-y", "output/{source_basename}_{start_time_epoch}/page{page_number}.png",
+                "-o", "output/{source_basename}_{start_time_epoch}/output.txt",
+                "test.pdf"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+The following is an image of a page from an insurance report of a loss. Looking at it, find out various details, that are available within this image. You can skip the details that are not visible in this page, as they might be in another. Don't include them in the output. If a field is shown with a blank value (in a table), consider it as "N/A". This is mostly the case with "Date of Contact", "Date Inspected" etc.
+These are the details I am looking for (along with how to typically find it). It might not be called exactly that, as it can be synonyms.
+- Report Title (Usually bold and centered in the page after the heading in page 1 (eg. "First report"))
+- Report Date (Found floating in page 1 just after the main header, and usually just before the title)
+- Report Type (Mostly found within the report title (eg. "Preliminary Report" or "Final Report"))
+- Type of Loss (aka "Peril", Found after the report title, likely in a borderless table. eg. Water, Fire)
+- Loss Date (aka "Date of Loss", Found in the same table)
+- Date of Contact (aka "Contact date", same table) - Refers to the date insurer was contacted about the loss.
+- Site Visit Date (aka "Date Inspected", same table) - Refers to Date on which investigation or inspection took place.
+- File Number (same table) - File number used to track the report (Usually in XXX.YYYY.ZZ format, ZZ is optional)
+- Secondary Type of Loss (aka "Cause of loss", found in text sentences in later pages) - This is the cause describing how the `Type of Loss` was caused. Example: If type of loss is "Fire", the cause of loss may describe that it was caused by accident or an Arson attack, etc.
+- Include any other noteworthy information as well that might be useful to an insurance investigator.
+
+List down the items found as a markdown list like `- Key: Value`.
+
+Here's information found in previous pages. You can refer to it for additional context. Avoid repeating the existing items in this that are not N/A, but if there are new updates (eg. Another section of new information) you can include it:
+```
+{previous_info}
+```
+
+The image is from page {page_number} of the report. Page number is also usually present in the footer.
